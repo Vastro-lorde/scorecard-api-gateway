@@ -1,0 +1,94 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/user/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44332"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_user_mgt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/courses/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44372"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/courses/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_cbt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/exams/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44372"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/exams/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_cbt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/questions/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44372"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/questions/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_cbt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/options/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44372"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/options/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_cbt"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "scorecard_user_mgt",
+      "Config": [
+        {
+          "Name": "scorecard_user_mgt",
+          "Version": "V1",
+          "Url": "https://localhost:44332/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "scorecard_cbt",
+      "Config": [
+        {
+          "Name": "scorecard_cbt",
+          "Version": "V1",
+          "Url": "https://localhost:44372/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5031"
+  }
+}

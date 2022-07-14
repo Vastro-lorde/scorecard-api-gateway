@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace scorecard_portal
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -21,6 +21,12 @@ namespace scorecard_portal
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                    webBuilder.ConfigureAppConfiguration(config => config.AddJsonFile("ocelot.json"));
+                })
+                .ConfigureLogging(logging => logging.AddConsole());
+                /*.ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.AddJsonFile("ocelot.json");
+                });*/
     }
 }
