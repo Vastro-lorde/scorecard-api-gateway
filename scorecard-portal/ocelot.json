@@ -14,6 +14,19 @@
       "SwaggerKey": "scorecard_user_mgt"
     },
     {
+      "DownstreamPathTemplate": "/api/performancescore/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7228"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/performancescore/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "SwaggerKey": "scorecard_performance-tracker"
+    },
+    {
       "DownstreamPathTemplate": "/api/courses/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -74,6 +87,16 @@
           "Name": "scorecard_user_mgt",
           "Version": "V1",
           "Url": "https://localhost:44332/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "scorecard_performance-tracker",
+      "Config": [
+        {
+          "Name": "scorecard_performance-tracker",
+          "Version": "V1",
+          "Url": "https://localhost:7228/swagger/v1/swagger.json"
         }
       ]
     },

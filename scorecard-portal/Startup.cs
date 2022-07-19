@@ -31,6 +31,7 @@ namespace scorecard_portal
             services.AddOcelot();
             services.AddControllers();
             services.AddSwaggerForOcelot(Configuration);
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +50,14 @@ namespace scorecard_portal
             });
 
             app.UseRouting();
+
+            app.UseCors(builder =>
+            {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
 
             app.UseAuthorization();
 
