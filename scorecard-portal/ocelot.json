@@ -11,6 +11,23 @@
       ],
       "UpstreamPathTemplate": "/api/user/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
+      "SwaggerKey": "scorecard_user_mgt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44332"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
       "SwaggerKey": "scorecard_user_mgt"
     },
     {
@@ -24,6 +41,10 @@
       ],
       "UpstreamPathTemplate": "/api/performancescore/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
       "SwaggerKey": "scorecard_performance-tracker"
     },
     {
@@ -37,6 +58,10 @@
       ],
       "UpstreamPathTemplate": "/api/courses/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
       "SwaggerKey": "scorecard_cbt"
     },
     {
@@ -50,6 +75,10 @@
       ],
       "UpstreamPathTemplate": "/api/exams/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
       "SwaggerKey": "scorecard_cbt"
     },
     {
@@ -76,6 +105,10 @@
       ],
       "UpstreamPathTemplate": "/api/options/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
       "SwaggerKey": "scorecard_cbt"
     }
   ],

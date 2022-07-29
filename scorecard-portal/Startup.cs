@@ -1,3 +1,5 @@
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +14,7 @@ using Ocelot.Middleware;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace scorecard_portal
@@ -28,10 +31,37 @@ namespace scorecard_portal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(e => e.AddDefaultPolicy(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            ));
+            var secret = Configuration["JWTSettings:SecretKey"];
+            var key = Encoding.UTF8.GetBytes(secret);
+            services.AddAuthentication(c =>
+            {
+                c.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                c.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(c =>
+                {
+                    c.RequireHttpsMetadata = false;
+                    c.SaveToken = true;
+                    c.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuerSigningKey = true,
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                        
+                    };
+                });
+
             services.AddOcelot();
             services.AddControllers();
+            services.AddSwaggerGen();
             services.AddSwaggerForOcelot(Configuration);
-            services.AddCors();
+            services.AddSwaggerConfiguration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +72,7 @@ namespace scorecard_portal
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            /*app.UseHttpsRedirection();*/
 
             app.UseSwaggerForOcelotUI(c =>
             {
@@ -51,13 +81,8 @@ namespace scorecard_portal
 
             app.UseRouting();
 
-            app.UseCors(builder =>
-            {
-                builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-            });
+            app.UseCors();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -65,6 +90,8 @@ namespace scorecard_portal
             {
                 endpoints.MapControllers();
             });
+
+
             await app.UseOcelot();
         }
     }

@@ -43,3 +43,14 @@ C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\obj\Debug\net5.0\refi
 C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\obj\Debug\net5.0\scorecard-portal.pdb
 C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\obj\Debug\net5.0\scorecard-portal.genruntimeconfig.cache
 C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\obj\Debug\net5.0\ref\scorecard-portal.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\System.Web.Cors.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\System.Web.Http.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\System.Web.Http.Cors.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hp\Source\Repos\scorecard-portal\scorecard-portal\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
