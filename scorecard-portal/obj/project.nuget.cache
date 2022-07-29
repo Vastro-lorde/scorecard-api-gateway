@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IRDqhqjX78mVIBjd6yxSfGOXNKQ4157NWRdAlPJhzFRsK19q6ZNBu/3NHpbaoA3O5dc8xpyAfW9U88qcWs2emg==",
+  "dgSpecHash": "GAXsswwJjBXw2Hybs4eCrIX5TDVGftqUrKjy9knIa4z7bdGh9V2LLQO+EKhAWVcNVjK5KHxbrMS0YLTCER8nGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\scorecard-portal\\scorecard-portal\\scorecard-portal.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.win32.registry\\4.6.0\\microsoft.win32.registry.4.6.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\mmlib.swaggerforocelot\\4.9.0\\mmlib.swaggerforocelot.4.9.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
