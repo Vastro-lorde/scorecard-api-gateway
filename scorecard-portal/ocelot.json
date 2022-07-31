@@ -110,6 +110,23 @@
         "AllowScopes": []
       },
       "SwaggerKey": "scorecard_cbt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/examresult/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44372"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/examresult/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      },
+      "SwaggerKey": "scorecard_cbt"
     }
   ],
   "SwaggerEndPoints": [
